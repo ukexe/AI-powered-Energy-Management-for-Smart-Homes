@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Usage Prediction</title>
+</head>
+<body>
+    <h1>Energy Usage Prediction Dashboard</h1>
+    {% for building, plot in building_plots.items() %}
+        <div>
+            <h2>Building {{ building }}</h2>
+            <img src="data:image/png;base64,{{ plot }}" alt="Building {{ building }} Energy Usage">
+        </div>
+    {% endfor %}
+</body>
+</html>
